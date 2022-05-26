@@ -30,8 +30,13 @@ const root = new Vue({
         },
     // milestone 3
         aggiungi() {
+            const task = {
+                text: this.newTodo,
+                done: false
+            }
+
             if (this.newTodo != "") {
-                this.todo.push(this.newTodo)
+                this.todo.push(task)
                 this.newTodo = "";
             }
         },
