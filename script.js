@@ -22,6 +22,10 @@ const root = new Vue({
             if (todo.done == true) {
                 return "text-decoration-line-through";
             }
+        },
+    // milestone 2
+        rimuovi(index) {
+            this.todo.splice(index, 1);
         }
     }
 })
