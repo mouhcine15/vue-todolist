@@ -1,6 +1,7 @@
 const root = new Vue({
     el: "#app",
     data: {
+        newTodo: "",
         todo: [
             {
                 text: "Fare i compiti",
@@ -26,6 +27,13 @@ const root = new Vue({
     // milestone 2
         rimuovi(index) {
             this.todo.splice(index, 1);
-        }
+        },
+    // milestone 3
+        aggiungi() {
+            if (this.newTodo != "") {
+                this.todo.push(this.newTodo)
+                this.newTodo = "";
+            }
+        },
     }
 })
